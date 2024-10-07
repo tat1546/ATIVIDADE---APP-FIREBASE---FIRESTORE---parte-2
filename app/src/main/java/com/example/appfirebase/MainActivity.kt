@@ -131,7 +131,7 @@ fun App(db: FirebaseFirestore) {
                 .padding(20.dp)
         ) {}
 
-        // Input para Nome
+       
         Row(
             Modifier.fillMaxWidth()
         ) {
@@ -148,7 +148,7 @@ fun App(db: FirebaseFirestore) {
             }
         }
 
-        // Input para Número
+        
         Row(
             Modifier.fillMaxWidth()
         ) {
@@ -171,7 +171,7 @@ fun App(db: FirebaseFirestore) {
                 .padding(20.dp)
         ) {}
 
-        // Botão para cadastrar Cliente
+        
         Row(
             Modifier
                 .fillMaxWidth(),
@@ -188,7 +188,7 @@ fun App(db: FirebaseFirestore) {
                         Log.d(ContentValues.TAG, "DocumentSnapshot written with ID: ${documentReference.id}")
                         Log.d(ContentValues.TAG, "Ultimo Cliente Cadastrado : $cliente")
 
-                        // Recupera e exibe clientes cadastrados
+                        
                         db.collection("Cliente").get()
                             .addOnSuccessListener { result ->
                                 clientes.clear()
@@ -213,7 +213,7 @@ fun App(db: FirebaseFirestore) {
             }
         }
 
-        // Seção para listar Clientes cadastrados
+        
         Row(
             Modifier
                 .fillMaxWidth()
